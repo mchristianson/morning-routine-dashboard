@@ -149,7 +149,7 @@ export async function getFollowUpEmailsFromBothAccounts(): Promise<{
 }
 
 async function fetchFollowUpEmailsForAccount(
-  refreshToken: string,
+  _refreshToken: string,
   account: 'account1' | 'account2'
 ): Promise<Email[]> {
   try {
@@ -161,7 +161,7 @@ async function fetchFollowUpEmailsForAccount(
     // 5. Return formatted Email objects
 
     // Pseudocode:
-    // const accessToken = await getAccessToken(refreshToken)
+    // const accessToken = await getAccessToken(_refreshToken)
     // const messages = await gmail.users.messages.list({
     //   userId: 'me',
     //   q: 'is:important OR is:starred OR subject:(follow up) OR label:flagged',
@@ -246,7 +246,7 @@ export async function getWeather(latitude: number, longitude: number) {
 // MEDIUM - For You reading list
 // ============================================================
 
-export async function getMediumPosts(username: string) {
+export async function getMediumPosts(_username: string) {
   try {
     // TODO: Parse RSS feed to get latest posts
     // npm install feed
