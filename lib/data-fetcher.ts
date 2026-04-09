@@ -19,7 +19,8 @@ interface Email {
 // PRIORITY DETECTION - AI Reasoning
 // ============================================================
 
-function calculateEmailPriority(email: {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function _calculateEmailPriority(email: {
   subject: string
   from: string
   isUnread: boolean
@@ -157,7 +158,7 @@ async function fetchFollowUpEmailsForAccount(
     // 1. Get access token from refresh token
     // 2. Query Gmail for emails from last 5 days
     // 3. Filter for follow-up related emails
-    // 4. For each email, calculate priority using calculateEmailPriority()
+    // 4. For each email, calculate priority using _calculateEmailPriority()
     // 5. Return formatted Email objects
 
     // Pseudocode:
